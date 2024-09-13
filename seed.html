@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Fertilizers and Seeds</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin: 10px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-container select,
+        .form-container input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #218838;
+        }
+
+        .form-container .section-title {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Buy Fertilizers and Seeds</h2>
+
+        <form action="/buy-items" method="POST">
+            <!-- Fertilizer Section -->
+            <div class="section-title">Fertilizers</div>
+
+            <label for="fertilizer-select">Select Fertilizer:</label>
+            <select id="fertilizer-select" name="fertilizer" required>
+                <option value="">Select a fertilizer</option>
+                <option value="urea">Urea</option>
+                <option value="dap">DAP</option>
+                <option value="npk">NPK</option>
+                <option value="organic">Organic Fertilizer</option>
+            </select>
+
+            <label for="fertilizer-quantity">Quantity (kg):</label>
+            <input type="number" id="fertilizer-quantity" name="fertilizer_quantity" min="1" placeholder="Enter quantity" required>
+
+            <!-- Seed Section -->
+            <div class="section-title">Seeds</div>
+
+            <label for="seed-select">Select Seed:</label>
+            <select id="seed-select" name="seed" required>
+                <option value="">Select a seed</option>
+                <option value="wheat">Wheat</option>
+                <option value="rice">Rice</option>
+                <option value="corn">Corn</option>
+                <option value="vegetable">Vegetable Seeds</option>
+            </select>
+
+            <label for="seed-quantity">Quantity (kg):</label>
+            <input type="number" id="seed-quantity" name="seed_quantity" min="1" placeholder="Enter quantity" required>
+
+            <!-- Submit Button -->
+            <button type="submit">Add to Cart</button>
+        </form>
+    </div>
+</body>
+</html>
